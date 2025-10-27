@@ -9,13 +9,12 @@ use App\Models\Course;
 class CourseController extends Controller
 {
 
-public function showDefault()
-{
-    // সর্বশেষ ক্রিয়েট হওয়া কোর্স
-    $course = Course::with('modules.contents')->latest()->firstOrFail();
+    public function showDefault()
+    {
+        $course = Course::with('modules.contents')->latest()->firstOrFail();
 
-    return view('show', compact('course'));
-}
+        return view('show', compact('course'));
+    }
 
 
 
@@ -39,7 +38,6 @@ public function showDefault()
             'modules.*.contents.*.title' => 'required_with:modules.*.contents|string|max:255',
             'modules.*.contents.*.type' => 'required_with:modules.*.contents|string',
             'modules.*.contents.*.body' => 'nullable|string',
-            // files validated below (if you send files with other keys adjust accordingly)
         ]);
 
         DB::beginTransaction();

@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Content extends Model
 {
-    protected $fillable = ['module_id','title','type','body','file_path','position','meta'];
+    protected $fillable = [
+        'module_id',
+        'title',
+        'type',
+        'body',
+        'file_path',
+        'position',
+        'meta'
+    ];
 protected $casts = ['meta' => 'array'];
 
 

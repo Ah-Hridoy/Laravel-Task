@@ -6,11 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-    protected $fillable = ['title','description','category','feature_video_path','meta'];
-protected $casts = ['meta' => 'array'];
+    protected $fillable = [
+        'title',
+        'description',
+        'category',
+        'feature_video_path',
+        'meta'
+    ];
+
+    protected $casts = ['meta' => 'array'];
 
 
-public function modules() {
-return $this->hasMany(Module::class)->orderBy('position');
-}
+    public function modules()
+    {
+        return $this->hasMany(Module::class)->orderBy('position');
+    }
 }
