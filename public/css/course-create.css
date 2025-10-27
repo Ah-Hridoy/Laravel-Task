@@ -1,0 +1,9 @@
+body{font-family: Arial, sans-serif; background:#f8f9fb;color:#222;padding:20px}
+.container{max-width:900px;margin:0 auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,0.05)}
+input, textarea, select{width:100%;padding:8px;margin:6px 0 12px;border:1px solid #ddd;border-radius:4px}
+button{padding:8px 12px;border:none;background:#2b7cff;color:#fff;border-radius:6px;cursor:pointer}
+button.remove-module, button.remove-content{background:#e04b4b}
+.alert{padding:8px;border-radius:4px;margin-bottom:10px}
+.alert.success{background:#e6ffed;color:#064e2f}
+.alert.error{background:#ffdede;color:#5f0000}
+.module, .content{background:#fbfdff;padding:12px;border-radius:6px;margin:10px 0}
